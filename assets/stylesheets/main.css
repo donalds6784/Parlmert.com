@@ -1,0 +1,491 @@
+/* 
+================================================
+http://meyerweb.com/eric/tools/css/reset/ 
+	 v2.0 | 20110126
+	 License: none (public domain)
+	 am here
+================================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	 list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+=========================================
+Custom Styles
+=========================================
+*/
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font: 300 16px/150% "poppins", "lato", sans-serif, serif;
+}
+
+a {
+	text-decoration: none;
+	color: #404040;
+}
+
+/*
+==========================================
+                 Header
+==========================================
+*/
+*, 
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	clear: both;
+	*zoom: 1;
+}
+
+/*
+===========================================
+                   Navigation
+===========================================
+*/
+.main-header {
+	width: 100%;
+    position: relative;
+    height: auto;
+} 
+
+.main-header header ul li {
+	font-size: 0.8em;
+	margin: 0 10px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.main-header ul li:last-child {
+	margin: 0px 0px !important;
+}
+
+.top-header {
+	background: rgb(215,216,217);
+	display: block;
+	text-align: right;
+	padding: 5px 0;
+}
+
+.main-nav a:hover,
+.top-header a:hover {
+	color: rgb(29,52,101);
+	border-bottom: 4px solid rgb(29,52,101);
+	padding-bottom: 6px;
+	transition: all 0.9s ease-in;
+}
+
+.nav-header {
+	display: table;
+	width: 100%;
+	text-align: center;
+	min-height: 50px;
+	border-bottom: 1px solid #efefef;
+	padding: 20px 0px;
+}
+
+.main-nav {
+	height: auto;
+}
+
+.nav-logo {
+	display: block;
+	float: left;
+	max-width: 30vw;
+	max-height: auto;
+}
+
+.nav-logo img {
+	max-width: 100%;
+	height: auto !important;
+}
+
+.main-nav .collapse-nav {
+	padding-top: 11px;
+	display: table;
+	float: left;
+	width: 66%;
+    margin-left: 17px;
+}
+
+.nav-header .apply-button a {
+	background: rgb(29,52,101);
+	border-radius: 0;
+    -webkit-border-radius: 0;
+    border: none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: right;
+    padding: 0px 30px;
+    color: #fafafa;
+}
+
+.nav-header .apply-button a:hover {
+	border-radius: 6px;
+	background: rgb(6, 26, 71);
+	color: #fafafa;
+}
+
+
+.nav-header .apply-button > a > span {
+	display: block;
+    font-size: .8em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+    font-weight: 100;
+    font-style: italic;
+    padding-bottom: .5rem;
+}
+
+
+
+/*.apply-button :hover,
+.apply-button > a:hover {
+	color: #fafafa;
+}*/
+
+
+/*
+========================================
+                  Forms
+========================================
+*/
+
+form {
+	width: 275px;
+    margin: 0px auto;
+}
+
+.search {
+	padding: 4px 15px;
+	border: 0px solid #dbdbdb;
+}
+
+.search:focus {
+	outline: none;
+	box-shadow: -1px 1px 6px rgb(6, 26, 71, .5);
+}
+
+.search-carret,
+.button {
+	position: relative;
+    margin-left: -2px;
+}
+
+.search-carret:after {
+	right:100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-color: rgba(29,52,101, 0);
+	border-right-color: rgb(29,52,101);
+	border-width: 10px;
+	margin-top: -10px; 
+}
+
+.button {
+	color: #fafafa;
+	padding: 4px 15px;
+	background: rgb(29,52,101);
+    border: 0px solid rgb(29,52,101);
+}
+
+.button:hover {
+	background: rgb(6, 26, 71);
+	cursor: pointer;
+}
+
+
+
+/*
+================================================
+                  Carrets
+================================================
+*/
+
+/*.carret {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.carret:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 4px solid #070b50;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.carret:after {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 0;
+  border-top: -20px solid #fff;
+  border-left: -20px solid transparent;
+  border-right: -20px solid transparent;
+}
+*/
+
+.carret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 4px;
+vertical-align: middle;
+border-top: 4px dashed;
+border-top: 4px solid\9;/* For IE support on zoom */
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}
+
+/*
+=========================================
+                   Corousal
+=========================================
+*/
+
+.banner-area {
+	background: url("file:///D:/WEBPAGES/Parlmert/assets/Images/Homepage/graduation.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-attachment: scroll;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+	background-clip: padding-box;
+	background-origin: padding-box;
+	
+}
+
+section.banner-area .corousal-wrapper {
+	padding: 3vw 0;
+	text-align: left;
+	line-height: 1.5;
+	min-width: 100%;
+	min-height: 100%;
+	/* Use either the fixed height or the vw height*/
+	/*height: 350px;*/
+	height: 27vw;
+  } 
+  
+  @media only screen and (max-width: 420px) {
+    section.banner-area .corousal-wrapper {
+      min-height: 40vw;
+      padding-top: 1vw;
+    }
+  }
+  
+  .banner-area .wrapper-overlay {
+	height: auto;
+	width: 60%;
+	padding: 20px 0;
+	text-align: left;
+	color: #061a47;
+	font-size: 1.5vw;
+	/* font-size: 2.5vw; */
+	font-weight: 600;
+	line-height: 1.5;
+	position: relative;
+  }
+
+ @media only screen and (max-width: 420px) {
+    section.banner-area .wrapper-overlay {
+      font-size: 3.5vw;
+      width: 90%;
+    }
+  }
+
+  .wrapper-overlay span a {
+	background: #061a47;
+	text-transform: capitalize;
+	color: #fafafa;
+	padding: 6px 30px;
+	position: relative;
+	top: 20px;
+	font-size: 1.4vw;
+  }
+  
+  @media only screen and (max-width: 420px) {
+    .wrapper-overlay span a {
+      top: 15px;
+      font-size: 3vw;
+      padding: 6px 30px;
+    }
+  }
+  
+/*
+==============================================
+ Irrelevant parts
+==============================================
+*/
+
+section.sec {
+	background: #061a47;
+}
+
+.sec {
+	padding: 20px 0px;
+	color: #fafafa;
+	
+}
+.sec span .line {
+	display: inline-block;
+}
+
+
+.sec span .sideline {
+	background: #ffffff;
+	width: 60px;
+	height: 5px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.sec span h5 {
+	font-size: 1em;
+	text-transform: uppercase;
+
+}
+
+.sec p {
+	font-size: 1em;
+	font-weight: 100;
+	margin: 20px 0 10px 0;
+	
+}
+
+.sec span.learn-more {
+	background: #fafafa;
+	padding: 5px 10px;
+	color: rgb(28, 8, 119);
+	text-transform: capitalize;
+}
+
+.sec span.learn-more:hover {
+	color: #570404;
+	border-radius: 7px;
+	transition: all .9s ease-out;
+	font-weight: 200;
+}
+/*
+.sec .col-1-2 {
+	width: 50%;
+	height: 20vw;
+	min-height: 100%;
+}
+
+.sec .col-left {
+	float: left;
+}
+.sec .col-right {
+	border-left: 2px solid #fafafa;
+	float: right;
+}*/
+
+
+/*footer .car {
+	width: 0;
+	height: 0;
+	border-top: 4px solid;
+	border-right: 4px solid #fafafa;
+	border-left: 4px solid #fafafa;s
+}
+*/
+footer .car {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 4px;
+	vertical-align: middle;
+	border-top: 10px dashed;
+	border-top: 10px solid\9;/* For IE support on zoom */
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	}
+
+	
