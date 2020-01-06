@@ -9,22 +9,25 @@ Custom Styles
 =========================================
 */
 
-html {
-	font-size: 10px;
-	scroll-behavior: smooth;
-}
-
-body {
-	font: 300 16px/150% "Poppins", "lato", sans-serif, serif;
-}
-
 :root {
     --main-bg-color: #061a47;
     --main-txt-color: #404040;
 	--normal-color: #fff;
 	--base-gradient: linear-gradient(#074df0, #061a47);
 	--box-shadow: 1px .2em .5em #b3b3b3;
+	--font-family-one: "Poppins", "lato", sans-serif, serif;
 }
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font: 300 16px/150% var(--font-family-one);
+}
+
+
 
 a {
 	text-decoration: none;
@@ -169,7 +172,7 @@ a {
 
 .nav-header .apply-button > a:hover {
 	border-radius: 6px;
-	background: rgb(6, 26, 71);
+	background: var(--base-gradient);
 	color: #fafafa;
 	transition: .5s ease-in-out;
 }
