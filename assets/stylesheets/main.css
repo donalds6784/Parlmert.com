@@ -1,57 +1,6 @@
-/* 
-================================================
-http://meyerweb.com/eric/tools/css/reset/ 
-	 v2.0 | 20110126
-	 License: none (public domain)
-	 am here
-================================================
-*/
+@charset "utf-8";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	 list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@import url("reset.css");
 
 /*
 =========================================
@@ -61,10 +10,11 @@ Custom Styles
 
 html {
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 body {
-	font: 300 16px/150% "poppins", "lato", sans-serif, serif;
+	font: 300 16px/150% "Poppins", "lato", sans-serif, serif;
 }
 
 a {
@@ -87,7 +37,7 @@ a {
 }
 
 .container {
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -132,7 +82,7 @@ a {
 }
 
 .main-header ul li:last-child {
-	margin: 0px 0px !important;
+	margin-right: 0 !important;
 }
 
 .top-header {
@@ -147,7 +97,7 @@ a {
 	color: rgb(29,52,101);
 	border-bottom: 4px solid rgb(29,52,101);
 	padding-bottom: 6px;
-	transition: all 0.9s ease-in;
+	transition: all 0.5s ease-out;
 }
 
 .nav-header {
@@ -157,6 +107,18 @@ a {
 	min-height: 50px;
 	border-bottom: 1px solid #efefef;
 	padding: 20px 0px;
+	transition: .5s;
+}
+
+
+.sticky-nav {
+	background: #fff;
+	position: fixed;
+	z-index: 1000;
+	transition: .5s;
+	padding: 5px 0;
+	top: 0;
+	opacity: 1;
 }
 
 .main-nav {
@@ -183,7 +145,7 @@ a {
     margin-left: 17px;
 }
 
-.nav-header .apply-button a {
+.nav-header .apply-button .btn {
 	background: rgb(29,52,101);
 	border-radius: 0;
     -webkit-border-radius: 0;
@@ -192,33 +154,33 @@ a {
     text-transform: uppercase;
     font-weight: 600;
     float: right;
-    padding: 0px 30px;
+    padding: 0px 28.5px;
     color: #fafafa;
 }
 
-.nav-header .apply-button a:hover {
+.nav-header .apply-button > a:hover {
 	border-radius: 6px;
 	background: rgb(6, 26, 71);
 	color: #fafafa;
+	transition: .5s ease-in-out;
 }
 
+.nav-header .apply-button > a:hover span {
+	color: #fafafa !important;
+}
 
 .nav-header .apply-button > a > span {
-	display: block;
+	display: block; 
     font-size: .8em;
     color: rgba(255, 255, 255, 0.5);
     text-transform: capitalize;
     font-weight: 100;
     font-style: italic;
-    padding-bottom: .5rem;
+	padding-bottom: .3rem;
+	transition: .3s;
 }
 
 
-
-/*.apply-button :hover,
-.apply-button > a:hover {
-	color: #fafafa;
-}*/
 
 
 /*
@@ -235,6 +197,7 @@ form {
 .search {
 	padding: 4px 15px;
 	border: 0px solid #dbdbdb;
+	font-style: italic;
 }
 
 .search:focus {
@@ -265,16 +228,15 @@ form {
 .button {
 	color: #fafafa;
 	padding: 4px 15px;
-	background: rgb(29,52,101);
-    border: 0px solid rgb(29,52,101);
+	background: rgb(29, 52, 101);
+    border: .5px solid rgb(29,52,101);
 }
 
 .button:hover {
+    transition: background .9s ease-in-out;
 	background: rgb(6, 26, 71);
 	cursor: pointer;
-}
-
-
+} 
 
 /*
 ================================================
@@ -329,7 +291,7 @@ border-left: 4px solid transparent;
 */
 
 .banner-area {
-	background: url("file:///D:/WEBPAGES/Parlmert/assets/Images/Homepage/graduation.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%);
+	background: url("file:///D:/WEBPAGES/Parlmert/assets/Images/Homepage/graduation-edited.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%), #0dcccc;
 	background-repeat: no-repeat;
 	background-position: top;
 	background-attachment: scroll;
@@ -339,8 +301,9 @@ border-left: 4px solid transparent;
     -o-background-size: cover;
 	background-clip: padding-box;
 	background-origin: padding-box;
-	
-}
+	object-fit: cover;
+
+} 
 
 section.banner-area .corousal-wrapper {
 	padding: 3vw 0;
@@ -353,16 +316,9 @@ section.banner-area .corousal-wrapper {
 	height: 27vw;
   } 
   
-  @media only screen and (max-width: 420px) {
-    section.banner-area .corousal-wrapper {
-      min-height: 40vw;
-      padding-top: 1vw;
-    }
-  }
-  
   .banner-area .wrapper-overlay {
 	height: auto;
-	width: 60%;
+	width: 55%;
 	padding: 20px 0;
 	text-align: left;
 	color: #061a47;
@@ -374,10 +330,40 @@ section.banner-area .corousal-wrapper {
   }
 
  @media only screen and (max-width: 420px) {
+	section.banner-area .corousal-wrapper {
+		min-height: 85vw;
+		padding-top: 1vw;
+	}
+
     section.banner-area .wrapper-overlay {
-      font-size: 3.5vw;
-      width: 90%;
-    }
+      font-size: 3.6vw;
+	  width: 75%;
+	  transform: translate(0, 50%);
+	}
+
+	.banner-area .wrapper-overlay span a {
+		top: 15px;
+		font-size: 1.2rem;
+		padding: 6px 25px;
+		/* border-radius: 20px; */
+	  }
+	
+	.container {
+		width: auto;
+		margin: auto auto;
+		padding: 0 15px;
+	}
+	
+	.row {
+		margin: 0;
+	}
+
+	.main-header {
+		width: 100%;
+		position: relative;
+		height: auto;
+	} 
+	
   }
 
   .wrapper-overlay span a {
@@ -388,15 +374,16 @@ section.banner-area .corousal-wrapper {
 	position: relative;
 	top: 20px;
 	font-size: 1.4vw;
+	/* transition: 1s ease-in-out; */
+	border-radius: 20px;
+  }
+
+  .wrapper-overlay >  span.overlay-btn a:hover {
+	  background: linear-gradient(#074df0, #061a47);
+	  box-shadow: 1px .2em .5em #b3b3b3;
+
   }
   
-  @media only screen and (max-width: 420px) {
-    .wrapper-overlay span a {
-      top: 15px;
-      font-size: 3vw;
-      padding: 6px 30px;
-    }
-  }
   
 /*
 ==============================================
@@ -434,23 +421,26 @@ section.sec {
 
 .sec p {
 	font-size: 1em;
-	font-weight: 100;
+	font-weight: 200;
 	margin: 20px 0 10px 0;
 	
 }
 
 .sec span.learn-more {
 	background: #fafafa;
-	padding: 5px 10px;
+	padding: .31vw .9vw;
 	color: rgb(28, 8, 119);
 	text-transform: capitalize;
+	border-radius: 5px;
 }
 
 .sec span.learn-more:hover {
-	color: #570404;
-	border-radius: 7px;
+	color: #fff;
+	border-radius: 0;
 	transition: all .9s ease-out;
 	font-weight: 200;
+	border: 2px solid #fff;
+	background: #061a47;
 }
 /*
 .sec .col-1-2 {
@@ -488,4 +478,10 @@ footer .car {
 	border-left: 10px solid transparent;
 	}
 
-	
+/* footer {
+	background: #570404;
+	width: 100%;
+	height: 300px;
+} */
+
+
