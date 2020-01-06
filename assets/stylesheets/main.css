@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/*Reset Rules */
 @import url("reset.css");
 
 /*
@@ -15,6 +16,14 @@ html {
 
 body {
 	font: 300 16px/150% "Poppins", "lato", sans-serif, serif;
+}
+
+:root {
+    --main-bg-color: #061a47;
+    --main-txt-color: #404040;
+	--normal-color: var(--normal-color);
+	--base-gradient: linear-gradient(#074df0, #061a47);
+	--box-shadow: 1px .2em .5em #b3b3b3;
 }
 
 a {
@@ -112,7 +121,7 @@ a {
 
 
 .sticky-nav {
-	background: #fff;
+	background: var(--normal-color);
 	position: fixed;
 	z-index: 1000;
 	transition: .5s;
@@ -226,15 +235,16 @@ form {
 }
 
 .button {
-	color: #fafafa;
+	color: var(--normal-color);
 	padding: 4px 15px;
-	background: rgb(29, 52, 101);
-    border: .5px solid rgb(29,52,101);
+	background: var(--main-bg-color);
+    border: .5px solid var(--main-bg-color);
 }
 
+.search-bar span.search-carret:hover,
 .button:hover {
     transition: background .9s ease-in-out;
-	background: rgb(6, 26, 71);
+	background: var(--base-gradient);
 	cursor: pointer;
 } 
 
@@ -266,7 +276,7 @@ form {
   position: absolute;
   left: 25px;
   top: 0;
-  border-top: -20px solid #fff;
+  border-top: -20px solid var(--normal-color);
   border-left: -20px solid transparent;
   border-right: -20px solid transparent;
 }
@@ -291,7 +301,7 @@ border-left: 4px solid transparent;
 */
 
 .banner-area {
-	background: url("../Images/Homepage/graduation-edited.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%), #0dcccc;
+	background: url("../Images/Homepage/graduation-edited.jpg"), linear-gradient(-154deg,#dff6ff,var(--normal-color) 93%), #0dcccc;
 	background-repeat: no-repeat;
 	background-position: top;
 	background-attachment: scroll;
@@ -321,7 +331,7 @@ section.banner-area .corousal-wrapper {
 	width: 55%;
 	padding: 20px 0;
 	text-align: left;
-	color: #061a47;
+	color: var(--main-bg-color);
 	font-size: 1.5vw;
 	/* font-size: 2.5vw; */
 	font-weight: 600;
@@ -367,7 +377,7 @@ section.banner-area .corousal-wrapper {
   }
 
   .wrapper-overlay span a {
-	background: #061a47;
+	background: var(--main-bg-color);
 	text-transform: capitalize;
 	color: #fafafa;
 	padding: 6px 30px;
@@ -379,9 +389,8 @@ section.banner-area .corousal-wrapper {
   }
 
   .wrapper-overlay >  span.overlay-btn a:hover {
-	  background: linear-gradient(#074df0, #061a47);
-	  box-shadow: 1px .2em .5em #b3b3b3;
-
+	  background: var(--base-gradient);
+	  box-shadow: var(--box-shadow);
   }
   
   
@@ -392,7 +401,7 @@ section.banner-area .corousal-wrapper {
 */
 
 section.sec {
-	background: #061a47;
+	background: var(--main-bg-color);
 }
 
 .sec {
@@ -435,12 +444,12 @@ section.sec {
 }
 
 .sec span.learn-more:hover {
-	color: #fff;
+	color: var(--normal-color);
 	border-radius: 0;
 	transition: all .9s ease-out;
 	font-weight: 200;
-	border: 2px solid #fff;
-	background: #061a47;
+	border: 2px solid var(--normal-color);
+	background: var(--main-bg-color);
 }
 /*
 .sec .col-1-2 {
