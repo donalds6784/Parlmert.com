@@ -21,7 +21,7 @@ body {
 :root {
     --main-bg-color: #061a47;
     --main-txt-color: #404040;
-	--normal-color: var(--normal-color);
+	--normal-color: #fff;
 	--base-gradient: linear-gradient(#074df0, #061a47);
 	--box-shadow: 1px .2em .5em #b3b3b3;
 }
@@ -241,10 +241,9 @@ form {
     border: .5px solid var(--main-bg-color);
 }
 
-.search-bar span.search-carret:hover,
 .button:hover {
     transition: background .9s ease-in-out;
-	background: var(--base-gradient);
+	background: rgb(6, 26, 71);
 	cursor: pointer;
 } 
 
