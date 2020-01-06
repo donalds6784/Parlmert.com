@@ -291,7 +291,7 @@ border-left: 4px solid transparent;
 */
 
 .banner-area {
-	background: url("file:///D:/WEBPAGES/Parlmert/assets/Images/Homepage/graduation-edited.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%), #0dcccc;
+	background: url("/Parlmert/assets/Images/Homepage/graduation-edited.jpg"), linear-gradient(-154deg,#dff6ff,#fff 93%), #0dcccc;
 	background-repeat: no-repeat;
 	background-position: top;
 	background-attachment: scroll;
