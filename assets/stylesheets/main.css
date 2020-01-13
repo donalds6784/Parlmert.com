@@ -15,7 +15,7 @@ Custom Styles
 	--normal-color: #fff;
 	--base-gradient: linear-gradient(#074df0, #061a47);
 	--box-shadow: 1px .2em .5em #b3b3b3;
-	--font-family-one: "Poppins", "lato", sans-serif, serif;
+	--font-family: "Poppins", "lato", sans-serif, serif;
 }
 
 html {
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-	font: 300 16px/150% var(--font-family-one);
+	font: 300 16px/150% var(--font-family);
 }
 
 
@@ -127,7 +127,7 @@ a {
 	background: var(--normal-color);
 	position: fixed;
 	z-index: 1000;
-	transition: .5s;
+	transition: .3s ease-out;
 	padding: 5px 0;
 	top: 0;
 	opacity: 1;
@@ -192,6 +192,76 @@ a {
 	transition: .3s;
 }
 
+/*===================================
+Drop down navigation
+===================================*/
+
+.drop-down {
+	display: inline-block;
+	position: relative;
+}
+
+.drop-down:hover {
+	border: none;
+}
+ .drop-down .drop-down-content ul {
+  display: none;
+  min-width: 23rem;
+  position: absolute;
+  z-index: 1000;
+  text-align: left;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.733);
+  right: -60px;
+  top: 2.5vw;
+}
+
+.drop-down-content .programs li {
+	/* background: #303e47; */
+	background: var(--main-bg-color);
+	border-top: 1px solid #fff;
+	width: 100%;
+	margin-left: 0;
+	font-size: 1.5rem;
+	padding: .7rem 1rem;
+}
+
+.drop-down-content li:nth-child(1) {
+	border-top: none;
+}
+
+.drop-down:hover .drop-down-content ul {
+	display: block;
+}
+
+.drop-down:hover .drop-down-content li:hover {
+	background: rgb(210, 224, 241);
+	cursor: pointer;
+	transition: .5s ease-in;
+}
+
+.drop-down:hover .drop-down-content li:hover a {
+	color: #303e47;
+	border-bottom: none;
+	font-weight: 300;
+}
+
+
+.drop-down:hover .drop-down-content li {
+	text-transform: capitalize;
+}
+
+.drop-down .drop-down-content .programs a {
+	color: var(--normal-color);
+	font-weight: 200;
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	
+}
+
+.drop-down .drop-down-content{
+	transition: 10s ease-out;
+	
+}
 
 
 
@@ -232,7 +302,7 @@ form {
 	width: 0;
 	position: absolute;
 	border-color: rgba(29,52,101, 0);
-	border-right-color: rgb(29,52,101);
+	border-right-color: var(--main-bg-color);
 	border-width: 10px;
 	margin-top: -10px; 
 }
@@ -246,7 +316,7 @@ form {
 
 .button:hover {
     transition: background .9s ease-in-out;
-	background: rgb(6, 26, 71);
+	background: rgb(2, 31, 110);
 	cursor: pointer;
 } 
 
@@ -417,7 +487,7 @@ section.sec {
 
 
 .sec span .sideline {
-	background: #ffffff;
+	background: var(--normal-color);
 	width: 60px;
 	height: 5px;
 	margin-right: 10px;
