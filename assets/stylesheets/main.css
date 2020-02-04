@@ -82,7 +82,7 @@ a {
 */
 .main-header {
 	width: 100%;
-    position: relative;
+    /* position: relative; */
     height: auto;
 } 
 
@@ -115,6 +115,7 @@ a {
 
 .nav-header {
 	display: table;
+	
 	width: 100%;
 	text-align: center;
 	min-height: 50px;
@@ -430,19 +431,21 @@ section.banner-area .corousal-wrapper {
  @media only screen and (max-width: 450px) {
 
 	header.nav-header div.nav-logo {
-		min-width: 35vw;
+		min-width: 37vw;
 		position: absolute;
-		top: 10%;;
+		top: 15%;
 	}
 
-	header.nav-header {
-		width: 100%;
-		text-align: left;
-		min-height: 40px;
-		max-height: 40px;
-		/* border-bottom: 1px solid #efefef; */
-		padding: 20px 0px;
-		transition: .5s;
+	header.nav-header  {
+		/* width: 100%; */
+		/* text-align: left; */
+		/* min-height: 4rem; */
+		/* height: 41vw; */
+		/* max-height: 40px; */
+		border-bottom: 1px solid #efefef;
+		padding: 3vw 0px;
+		/* transition: .5s; */
+		/* background: chartreuse; */
 	}
 
 	.nav-toggle-btn {
@@ -452,7 +455,7 @@ section.banner-area .corousal-wrapper {
 		position: absolute;
 		display: inline-block;
 		left: 90%;
-		top: 20%;
+		top: 25%;
 	}
 
 	.nav-header div.nav-toggle-btn .toggle-lines {
@@ -474,8 +477,8 @@ section.banner-area .corousal-wrapper {
 		flex-direction: column;
 		position: absolute;
 		width: 100%;
-		background: #0595a8;
-		transform: translateY(200px);
+		background: #bdc7c8;
+		transform: translateY(10.6vw);
 		opacity: 1;
 	}
 
