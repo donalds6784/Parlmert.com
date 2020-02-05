@@ -430,23 +430,94 @@ section.banner-area .corousal-wrapper {
 
  @media only screen and (max-width: 450px) {
 
+	.container {
+		margin: 0 auto;
+		padding: 0px;
+		width: 95%;
+	}
+
+	div.mobile-view-container {
+		margin: 0 auto;
+		padding: 0px;
+		width: 100%;
+	}
+	
+	.row {
+		margin-right: 0px;
+		margin-left: 0px;
+		
+	}
+	.main-header {
+		width: 100%;
+		position: relative;
+		height: auto;
+	}
+
 	header.nav-header div.nav-logo {
 		min-width: 37vw;
 		position: absolute;
 		top: 15%;
+		left: 3%;
 	}
 
 	header.nav-header  {
-		/* width: 100%; */
-		/* text-align: left; */
-		/* min-height: 4rem; */
-		/* height: 41vw; */
-		/* max-height: 40px; */
+		text-align: left;
 		border-bottom: 1px solid #efefef;
 		padding: 3vw 0px;
-		/* transition: .5s; */
-		/* background: chartreuse; */
 	}
+	
+	.main-nav .collapse-nav {
+		flex-direction: column;
+		position: absolute;
+		width: 100%;
+		background: #fff;
+		transform: translateY(9.1vw);
+		opacity: 1;
+		z-index: 999;
+		padding: 1.5rem 0;
+	}
+
+	.collapse-nav li {
+		width: inherit;
+		font-size: 2rem;
+	}
+
+	.collapse-nav li .carret {
+		display: none;
+	}
+
+	.collapse-nav li > a::after {
+		content: '\002B';
+		font-size: 2rem;
+		float: right;
+		margin-right: 2.5rem;
+		vertical-align: top;
+	}
+
+	.main-nav a:hover {
+		border-bottom: none;
+	}
+
+	/* .collapse-nav .main-menu-drop-down .drop-down-content-main-nav:hover ul {
+		display: block;
+		position: absolute;
+		min-width: 100%;
+		display: none;
+		left: 0px;
+	} */
+
+	.collapse-nav .main-menu-drop-down .drop-down-content-main-nav ul {
+
+	}
+
+	.main-menu-drop-down .drop-down-content ul{
+		/* display: block; */
+		position: relative;~
+		left: 0px;
+		width: 100%;
+	}
+	
+
 
 	.nav-toggle-btn {
 		/* background: rgba(0, 0, 0, 0.733); */
@@ -463,6 +534,7 @@ section.banner-area .corousal-wrapper {
 		width: 100%;
 		background: #404040;
 		margin-top: 3px;
+		border-radius: 4px;
 	}
 
 	.nav-header div.apply-button {
@@ -473,15 +545,7 @@ section.banner-area .corousal-wrapper {
 		left: 0; */
 	}
 
-	.main-nav .collapse-nav {
-		flex-direction: column;
-		position: absolute;
-		width: 100%;
-		background: #bdc7c8;
-		transform: translateY(10.6vw);
-		opacity: 1;
-	}
-
+	
 
 
 
@@ -509,23 +573,7 @@ section.banner-area .corousal-wrapper {
 		font-size: 1.2rem;
 		padding: 6px 25px;
 		/* border-radius: 20px; */
-	  }
-	
-	.container {
-		width: auto;
-		margin: auto auto;
-		padding: 0 15px;
-	}
-	
-	.row {
-		margin: 0;
-	}
-
-	.main-header {
-		width: 100%;
-		position: relative;
-		height: auto;
-	} 
+	  } 
 	
   }
   /* END: of Mobile screen media Query */
