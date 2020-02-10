@@ -242,7 +242,7 @@ Drop down navigation
 .drop-down:hover .drop-down-content li:hover {
 	background: rgb(210, 224, 241);
 	cursor: pointer;
-	transition: .5s ease-in;
+	transition: all .5s ease-in;
 }
 
 .drop-down:hover .drop-down-content li:hover a {
@@ -273,6 +273,16 @@ Drop down navigation
 	top: -0%;
 	transition: .5s ease-in;
 	display: block;
+}
+
+.main-menu-drop-down:hover .sub-menu-drop-down:hover ul li a {
+	color: var(--normal-color);
+	font-weight: 200;
+}
+
+.main-menu-drop-down:hover .sub-menu-drop-down:hover ul li:hover a {
+	color: #303e47;
+	font-weight: 300;
 }
 
 
@@ -430,6 +440,7 @@ section.banner-area .corousal-wrapper {
 
  @media only screen and (max-width: 450px) {
 
+
 	.container {
 		margin: 0 auto;
 		padding: 0px;
@@ -447,6 +458,9 @@ section.banner-area .corousal-wrapper {
 		margin-left: 0px;
 		
 	}
+
+		/* Beggining of Header Navigation rules */
+
 	.main-header {
 		width: 100%;
 		position: relative;
@@ -486,7 +500,7 @@ section.banner-area .corousal-wrapper {
 		display: none;
 	}
 
-	.collapse-nav li > a::after {
+	.collapse-nav li[class~="drop-down"] > a::after {
 		content: '\002B';
 		font-size: 2rem;
 		float: right;
@@ -506,18 +520,22 @@ section.banner-area .corousal-wrapper {
 		left: 0px;
 	} */
 
-	.collapse-nav .main-menu-drop-down .drop-down-content-main-nav ul {
+	/* .collapse-nav .main-menu-drop-down .drop-down-content-main-nav ul {
 
+	} */
+
+	.main-menu-drop-down .drop-down-content ul,
+	.sub-menu-drop-down:hover .sub-menu-content ul {
+		left: 0px;
+		box-shadow: none;
+		position: relative;
 	}
 
 	.main-menu-drop-down .drop-down-content ul{
 		display: block;
-		position: relative;
 		left: 0px;
 		width: 100%;
 	}
-	
-
 
 	.nav-toggle-btn {
 		/* background: rgba(0, 0, 0, 0.733); */
