@@ -532,7 +532,7 @@ section.banner-area .corousal-wrapper {
 	}
 
 	.main-menu-drop-down .drop-down-content ul{
-		display: block;
+		/* display: block; */
 		left: 0px;
 		width: 100%;
 	}
