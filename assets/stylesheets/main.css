@@ -547,6 +547,7 @@ section.banner-area .corousal-wrapper {
 		top: 25%;
 	}
 
+	/* BEGINNING: Nav Toggle button */
 	.nav-header div.nav-toggle-btn .toggle-lines {
 		height: 5px;
 		width: 100%;
@@ -554,6 +555,25 @@ section.banner-area .corousal-wrapper {
 		margin-top: 3px;
 		border-radius: 4px;
 	}
+
+	div.open .toggle-line-1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+
+	div.open .toggle-line-2 {
+		opacity: 0;
+	}
+
+	div.open .toggle-line-3 {
+		transform: rotate(45deg) translate(-5px, -6px);
+	}
+
+	div.open .toggle-line-1,
+	div.open .toggle-line-2,
+	div.open .toggle-line-3 {
+		transition: .6s cubic-bezier(0.47, 0, 0.745, 0.715);
+	}
+/* END: Nav toggle button  */
 
 	.nav-header div.apply-button {
 		display: none;
@@ -564,15 +584,11 @@ section.banner-area .corousal-wrapper {
 	}
 
 	
-
-
-
-
-	
-
 	header.top-header {
 		display: none;
 	}
+
+
 
 
 	section.banner-area .corousal-wrapper {
