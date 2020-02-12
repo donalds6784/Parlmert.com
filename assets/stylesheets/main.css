@@ -474,13 +474,17 @@ section.banner-area .corousal-wrapper {
 		left: 3%;
 	}
 
+	.main-header header ul li a {
+		color: var(--normal-color);
+	}
+
 	header.nav-header  {
 		text-align: left;
 		border-bottom: 1px solid #efefef;
 		padding: 3vw 0px;
 	}
 	
-	.main-nav .collapse-nav {
+	nav.main-nav .collapse-nav {
 		flex-direction: column;
 		position: absolute;
 		width: 100%;
@@ -489,6 +493,9 @@ section.banner-area .corousal-wrapper {
 		opacity: 1;
 		z-index: 999;
 		padding: 1.5rem 0;
+		display: none;
+		background: var(--main-bg-color);
+		
 	}
 
 	.collapse-nav li {
@@ -524,21 +531,43 @@ section.banner-area .corousal-wrapper {
 
 	} */
 
-	.main-menu-drop-down .drop-down-content ul,
+	.main-menu-drop-down:hover .drop-down-content-main-nav ul,
 	.sub-menu-drop-down:hover .sub-menu-content ul {
-		left: 0px;
 		box-shadow: none;
+		left: 0;
+		padding: 0 0;
+		margin: 0;
+	}
+
+	/* .sub-menu-drop-down:hover .sub-menu-content ul li a {
+		color: aliceblue;
+	} */
+
+	.main-menu-drop-down:hover .drop-down-content-main-nav ul {
 		position: relative;
+		/* background: var(--main-bg-color); */
 	}
 
 	.main-menu-drop-down .drop-down-content ul{
-		/* display: block; */
-		left: 0px;
+		/* left: 0px; */
 		width: 100%;
+		/* display: block; */
+		/* position: relative; */
+		/* box-shadow: none; */
+		right: 0;
 	}
 
+	.main-menu-drop-down a {
+		color: var(--normal-color);
+	}
+
+	.drop-down:hover .drop-down-content li:hover {
+		background: var(--main-bg-color);
+	}
+
+
+/* BEGINNING: Nav Toggle button */
 	.nav-toggle-btn {
-		/* background: rgba(0, 0, 0, 0.733); */
 		width: 2.8rem;
 		height: 2.7rem;
 		position: absolute;
@@ -547,7 +576,6 @@ section.banner-area .corousal-wrapper {
 		top: 25%;
 	}
 
-	/* BEGINNING: Nav Toggle button */
 	.nav-header div.nav-toggle-btn .toggle-lines {
 		height: 5px;
 		width: 100%;
@@ -568,9 +596,9 @@ section.banner-area .corousal-wrapper {
 		transform: rotate(45deg) translate(-5px, -6px);
 	}
 
-	div.open .toggle-line-1,
-	div.open .toggle-line-2,
-	div.open .toggle-line-3 {
+	.nav-toggle-btn div.open .toggle-line-1,
+	.nav-toggle-btn div.open .toggle-line-2,
+	.nav-toggle-btn div.open .toggle-line-3 {
 		transition: .6s cubic-bezier(0.47, 0, 0.745, 0.715);
 	}
 /* END: Nav toggle button  */

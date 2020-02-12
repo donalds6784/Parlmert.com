@@ -25,7 +25,6 @@ responsiveNav.addEventListener('click', _ => {
         nav.style.display = 'block'; //reviews the nav
         navIsOpen = true;
     } else {
-        
         responsiveNav.classList.remove('open'); //toggle button returns to normal
         nav.style.display = 'none';
         navIsOpen = false;
