@@ -5,7 +5,7 @@
 
 /*
 =========================================
-Custom Styles
+              Custom Styles
 =========================================
 */
 
@@ -13,9 +13,11 @@ Custom Styles
     --main-bg-color: #061a47;
     --main-txt-color: #404040;
 	--normal-color: #fff;
-	--base-gradient: linear-gradient(#061a47, #0536a8);
-	--box-shadow: 1px .2em .5em #b3b3b3;
+	--base-gradient: linear-gradient(#061a47, #062685);
+	--box-shadow: 0px 4px 6px 0 #b3b3b3;
 	--font-family: "Poppins", "lato", sans-serif, serif;
+	--desktop-width: 90%;
+	--mobile-width: 95%;
 }
 
 html {
@@ -46,11 +48,11 @@ a {
 	-webkit-box-sizing: border-box;
 		 -moz-box-sizing: border-box;
 			-ms-box-sizing: border-box;
-					box-sizing: border-box;
+				box-sizing: border-box;
 }
 
 .container {
-	width: 90%;
+	width: var(--desktop-width);
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -114,14 +116,15 @@ a {
 }
 
 .nav-header {
-	display: table;
-	
+	display: table;	
+	/* display: flex; */
+	/* justify-content: center; */
 	width: 100%;
 	text-align: center;
 	min-height: 50px;
 	border-bottom: 1px solid #efefef;
 	padding: 20px 0px;
-	transition: .5s;
+	transition: all .5s ease-in;
 }
 
 
@@ -129,7 +132,7 @@ a {
 	background: var(--normal-color);
 	position: fixed;
 	z-index: 1000;
-	transition: .3s ease-out;
+	transition: all .3s ease-out;
 	padding: .4vw 0;
 	top: 0;
 	opacity: 1;
@@ -174,14 +177,20 @@ a {
     font-weight: 600;
     float: right;
     padding: 0px 28.5px;
-    color: #fafafa;
+	color: #fafafa;
+	/* transition: all .5s ease-out; */
+	/* transition:all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+	/* backface-visibility: hidden; */
+	/* -webkit-backface-visibility: hidden; */
 }
 
 .nav-header .apply-button > a:hover {
 	border-radius: 6px;
 	background: var(--base-gradient);
 	color: #fafafa;
-	transition: .5s ease-in-out;
+	/* transition: all .5s ease-out; */
+	transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: var(--box-shadow);
 }
 
 .nav-header .apply-button > a:hover span {
@@ -196,7 +205,7 @@ a {
     font-weight: 100;
     font-style: italic;
 	padding-bottom: .3rem;
-	transition: .3s;
+	transition: all .3s ease;
 }
 
 /*===================================
@@ -208,6 +217,10 @@ Drop down navigation
 	position: relative;
 }
 
+.main-menu-drop-down:hover {
+	transition: all 1s ease-in;
+}
+
  .main-menu-drop-down .drop-down-content ul {
   display: none;
   min-width: 23rem;
@@ -217,7 +230,6 @@ Drop down navigation
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.733);
   right: -60px;
   top: 3.01vw;
-  
 }
 
 .drop-down-content .programs li {
@@ -237,6 +249,7 @@ Drop down navigation
 
 .main-menu-drop-down:hover .drop-down-content-main-nav ul {
 	display: block;
+	transition: all .5s ease-in;
 }
 
 .drop-down:hover .drop-down-content li:hover {
@@ -338,7 +351,7 @@ form {
 
 .button:hover {
     transition: background .9s ease-in-out;
-	background: rgb(2, 31, 110);
+	background: var(--base-gradient);
 	cursor: pointer;
 } 
 
@@ -438,7 +451,7 @@ section.banner-area .corousal-wrapper {
 	BEGINNING:		Mobile screen size Media Queries
   ====================================================*/
 
- @media only screen and (max-width: 450px) {
+ @media only screen and (max-width: 500px) {
 
 
 	.container {
@@ -459,7 +472,11 @@ section.banner-area .corousal-wrapper {
 		
 	}
 
-		/* Beggining of Header Navigation rules */
+		/* BEGINNING: of Header Navigation rules */
+
+	header.top-header {
+		display: none;
+	}
 
 	.main-header {
 		width: 100%;
@@ -495,6 +512,8 @@ section.banner-area .corousal-wrapper {
 		padding: 1.5rem 0;
 		display: none;
 		background: var(--main-bg-color);
+		/* background: var(--base-gradient); */
+		transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		
 	}
 
@@ -519,33 +538,17 @@ section.banner-area .corousal-wrapper {
 		border-bottom: none;
 	}
 
-	/* .collapse-nav .main-menu-drop-down .drop-down-content-main-nav:hover ul {
-		display: block;
-		position: absolute;
-		min-width: 100%;
-		display: none;
-		left: 0px;
-	} */
-
-	/* .collapse-nav .main-menu-drop-down .drop-down-content-main-nav ul {
-
-	} */
-
 	.main-menu-drop-down:hover .drop-down-content-main-nav ul,
 	.sub-menu-drop-down:hover .sub-menu-content ul {
 		box-shadow: none;
 		left: 0;
 		padding: 0 0;
-		margin: 0;
+		margin: 0 0;
 	}
-
-	/* .sub-menu-drop-down:hover .sub-menu-content ul li a {
-		color: aliceblue;
-	} */
 
 	.main-menu-drop-down:hover .drop-down-content-main-nav ul {
 		position: relative;
-		/* background: var(--main-bg-color); */
+		background: var(--main-bg-color);
 	}
 
 	.main-menu-drop-down .drop-down-content ul{
@@ -557,19 +560,17 @@ section.banner-area .corousal-wrapper {
 		right: 0;
 	}
 
-	.main-menu-drop-down a {
-		color: var(--normal-color);
-	}
-
 	.drop-down:hover .drop-down-content li:hover {
 		background: var(--main-bg-color);
 	}
+
+	/* END: Header navigation rules */
 
 
 /* BEGINNING: Nav Toggle button */
 	.nav-toggle-btn {
 		width: 2.8rem;
-		height: 2.7rem;
+		/* height: 2.7rem; */
 		position: absolute;
 		display: inline-block;
 		left: 90%;
@@ -582,6 +583,7 @@ section.banner-area .corousal-wrapper {
 		background: #404040;
 		margin-top: 3px;
 		border-radius: 4px;
+		transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
 	}
 
 	div.open .toggle-line-1 {
@@ -596,26 +598,18 @@ section.banner-area .corousal-wrapper {
 		transform: rotate(45deg) translate(-5px, -6px);
 	}
 
-	.nav-toggle-btn div.open .toggle-line-1,
-	.nav-toggle-btn div.open .toggle-line-2,
-	.nav-toggle-btn div.open .toggle-line-3 {
-		transition: .6s cubic-bezier(0.47, 0, 0.745, 0.715);
-	}
 /* END: Nav toggle button  */
 
-	.nav-header div.apply-button {
+/* BEGINNING: click to apply btn */
+
+	.nav-header div.apply-button a{
 		display: none;
 		/* position: absolute;
 		width: 100%;
-		top: 40px;
-		left: 0; */
+		top: 40px; */
 	}
 
-	
-	header.top-header {
-		display: none;
-	}
-
+/* END: click to apply btn */
 
 
 
@@ -631,9 +625,9 @@ section.banner-area .corousal-wrapper {
 	}
 
 	.banner-area .wrapper-overlay span a {
-		top: 15px;
-		font-size: 1.2rem;
-		padding: 6px 25px;
+		top: 10rem;
+		font-size: 1.4rem;
+		padding: 7px 25px;
 		/* border-radius: 20px; */
 	  } 
 	
@@ -646,21 +640,20 @@ section.banner-area .corousal-wrapper {
 
 
   /* END: tablet view mode */
-
-
-  .wrapper-overlay span a {
+   
+.wrapper-overlay span a {
 	background: var(--main-bg-color);
 	text-transform: capitalize;
 	color: #fafafa;
 	padding: 6px 30px;
-	position: relative;
-	top: 20px;
 	font-size: 1.4vw;
-	/* transition: 1s ease-in-out; */
 	border-radius: 20px;
+	margin-top: 20px;
+	display: block;
+	width: fit-content;
   }
 
-  .wrapper-overlay >  span.overlay-btn a:hover {
+  .wrapper-overlay span a:hover {
 	  background: var(--base-gradient);
 	  box-shadow: var(--box-shadow);
   }
@@ -672,21 +665,18 @@ section.banner-area .corousal-wrapper {
 ==============================================
 */
 
-section.sec {
-	background: var(--main-bg-color);
-}
-
-.sec {
+section.cards-section {
+	background: var(--base-gradient);
 	padding: 20px 0px;
 	color: #fafafa;
-	
 }
-.sec span .line {
+
+.cards-section span .line {
 	display: inline-block;
 }
 
 
-.sec span .sideline {
+.cards-section span .sideline {
 	background: var(--normal-color);
 	width: 60px;
 	height: 5px;
@@ -694,20 +684,20 @@ section.sec {
 	vertical-align: middle;
 }
 
-.sec span h5 {
+.cards-section span h5 {
 	font-size: 1em;
 	text-transform: uppercase;
 
 }
 
-.sec p {
+.cards-section p {
 	font-size: 1em;
 	font-weight: 200;
 	margin: 20px 0 10px 0;
 	
 }
 
-.sec span.learn-more {
+.cards-section span.learn-more {
 	background: #fafafa;
 	padding: .31vw .9vw;
 	color: rgb(28, 8, 119);
@@ -715,7 +705,7 @@ section.sec {
 	border-radius: 5px;
 }
 
-.sec span.learn-more:hover {
+.cards-section span.learn-more:hover {
 	color: var(--normal-color);
 	border-radius: 0;
 	transition: all .9s ease-out;
@@ -724,16 +714,16 @@ section.sec {
 	background: var(--main-bg-color);
 }
 /*
-.sec .col-1-2 {
+.cards-section .col-1-2 {
 	width: 50%;
 	height: 20vw;
 	min-height: 100%;
 }
 
-.sec .col-left {
+.cards-section .col-left {
 	float: left;
 }
-.sec .col-right {
+.cards-section .col-right {
 	border-left: 2px solid #fafafa;
 	float: right;
 }*/
